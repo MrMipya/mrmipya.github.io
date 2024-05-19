@@ -333,6 +333,7 @@ h2 {
   padding-bottom: 0px;
   color: #fff;
   font-size: 18px;
+  text-align: justify;
 }
 
 #bio h1 {
@@ -563,147 +564,149 @@ button:focus {
   }
   #bio {
     font-size: 15px;
+    text-align: justify;
   }
   #about table {
     width: 100%;
     margin-top: 6vh;
+
+    #about-me-container {
+      flex-direction: column;
+    }
+    #about table tr td {
+      text-align: center;
+    }
+    #about-pics {
+      display: none;
+    }
+
+    .btn_one {
+      padding: 6px 30px;
+      width: 60%;
+      margin: 4vh auto;
+      box-shadow: 0px 10px 20px rgba(255, 139, 44, 0.8);
+      background: rgb(255, 85, 0);
+      color: #fff;
+    }
+    .btn_one:hover {
+      box-shadow: 0px 10px 40px rgba(255, 157, 44, 0.8);
+      cursor: pointer;
+    }
+    #contact table tr td {
+      width: 100%;
+      display: block;
+    }
+    #inner_table tr td {
+      padding: 10px 0px !important;
+    }
+    #contact form input {
+      width: 90%;
+    }
+    #contact form textarea {
+      width: 90%;
+    }
+    #work h1 {
+      width: 19%;
+    }
+    #bio h1 {
+      width: 25%;
+      text-align: center;
+    }
+    #about-me {
+      flex: 0;
+    }
+
+    #contact h1 {
+      width: 33%;
+    }
+    header {
+      width: 96vw;
+      background: #fff;
+      padding: 4vh 2vw;
+      position: absolute;
+    }
+    #header table tr td {
+      width: 100%;
+      display: block;
+      text-align: center;
+      padding: 15px 0px;
+    }
+    #navigation a {
+      color: #fff;
+    }
   }
 
-  #about-me-container {
-    flex-direction: column;
-  }
-  #about table tr td {
-    text-align: center;
-  }
-  #about-pic {
-    display: none;
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
   }
 
-  .btn_one {
-    padding: 6px 30px;
-    width: 60%;
-    margin: 4vh auto;
-    box-shadow: 0px 10px 20px rgba(255, 139, 44, 0.8);
-    background: rgb(255, 85, 0);
-    color: #fff;
-  }
-  .btn_one:hover {
-    box-shadow: 0px 10px 40px rgba(255, 157, 44, 0.8);
-    cursor: pointer;
-  }
-  #contact table tr td {
-    width: 100%;
-    display: block;
-  }
-  #inner_table tr td {
-    padding: 10px 0px !important;
-  }
-  #contact form input {
-    width: 90%;
-  }
-  #contact form textarea {
-    width: 90%;
-  }
-  #work h1 {
-    width: 19%;
-  }
-  #bio h1 {
-    width: 25%;
-  }
-  #about-me {
-    flex: 0;
-  }
-
-  #contact h1 {
-    width: 33%;
-  }
-  header {
-    width: 96vw;
-    background: #fff;
-    padding: 4vh 2vw;
-    position: absolute;
-  }
-  #header table tr td {
-    width: 100%;
-    display: block;
-    text-align: center;
-    padding: 15px 0px;
-  }
-  #navigation a {
-    color: #fff;
-  }
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
+  /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
 
-  /*
+    /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+    pre {
+      white-space: pre-wrap !important;
+    }
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
 
-  h2,
-  h3 {
-    page-break-after: avoid;
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
   }
 }
