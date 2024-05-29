@@ -622,7 +622,7 @@ button:focus {
   }
   header {
     width: 96vw;
-    background: #fff;
+    background: #000;
     padding: 4vh 2vw;
     position: absolute;
   }
