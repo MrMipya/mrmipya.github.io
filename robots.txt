@@ -3,5 +3,5 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-sitemap: sitemap.xml
+sitemap: https://samipya.pages.dev/sitemap.xml
 
