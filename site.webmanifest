@@ -1,12 +1,21 @@
 {
-  "short_name": "",
-  "name": "",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
+  "short_name": "Mipya",
+  "name": "Samipya Mainali's portfolio",
+  "description": "Personal website of Samipya Mainali, a 15-year-old student from Nepal passionate about Computer Science, music, gaming, and adventure.",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "background_color": "#000",
+  "theme_color": "#000"
 }
